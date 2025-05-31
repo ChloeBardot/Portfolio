@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloé BARDOT</title>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="accueil">
+        <div id="navBarre">
+            <div id="nom">
+                <div id="initiales">
+                    <h1>CB</h1>
+                </div>
+                <div id="nomComplet">
+                    <p>CHLOE</p>
+                    <p>BARDOT</p>
+                </div>
+            </div>
+            <div id="onglets">
+                <button onclick="location.href='#presentation'">Présentation</button>
+                <button onclick="location.href='#projets'">Mes Projets</button>
+                <button onclick="location.href='#contact'">Contact</button>
+            </div>
+        </div>
+
+        <div id="presGenerale">
+            <div id="textePresG">
+                <p id="titre1">Etudiante en BUT Informatique </p>
+                <p id="titre2">Je fais aussi de la musique et combine mes 2 passions au quotidien.</p>
+            </div>
+            <div id="photoG">
+                <img src="chloePortfolio.png">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="presentation">
+        <div id="textePres">
+            <h2>Qui je suis</h2>
+            <p>
+                Je suis Chloé BARDOT, étudiante en 1ère année de BUT Informatique à Gradignan. 
+                
+                
+            </p>
+            <p>
+                Après mon bac général, j'ai décidé de faire un BUT Informatique
+                afin de pouvoir poursuivre en parallèle mes études au conservatoire de Bordeaux.
+            </p>
+            <p>
+                Ce que j'aime le plus faire, c'est de développer des applications qui nécessitent des algorithmes poussés. 
+                Dans ce Portfolio, vous trouverez quelques unes de mes réalisations les plus significatives.
+            </p>
+        </div>
+    </div>
+
+
+    <div id="imageModalTowaJeu" class="modal" onclick="closeImage('imageModalTowaJeu')">
+        <img src="RetexTowaJeu.png" alt="Image en grand">
+    </div>
+    <div id="imageModalAOP" class="modal" onclick="closeImage('imageModalAOP')">
+        <img src="RetexPortailAOP.png" alt="Image en grand">
+    </div>
+    <div id="imageModalDosBienMis" class="modal" onclick="closeImage('imageModalDosBienMis')">
+        <img src="RetexDosBienMis.png" alt="Image en grand">
+    </div>
+    <div id="imageModalFerme" class="modal" onclick="closeImage('imageModalFerme')">
+        <img src="RetexFermeSteeve.png" alt="Image en grand">
+    </div>
+    <div id="imageModalTowaIA" class="modal" onclick="closeImage('imageModalTowaIA')">
+        <img src="RetexTowaIA.png" alt="Image en grand">
+    </div>
+    <div id="imageModalCourse" class="modal" onclick="closeImage('imageModalCourse')">
+        <img src="RetexClubCourse.png" alt="Image en grand">
+    </div>
+
+
+    <div id="projets">
+        <h2>Quelques uns de mes projets</h2>
+        <div id="tousProjets">
+            <div class="unProjet" onclick="openImage('imageModalTowaJeu')">
+                <img src="imgTowaJeu.png">
+                <div class="piedProjet">
+                    <h3>TOWA le jeu</h3>
+                    <div class="competences">
+                        <p>Java</p>
+                        <p>Algorithmique</p>
+                        <p>Jeu de tests</p>
+                    </div>
+                </div>
+            </div>
+            <div class="unProjet" onclick="openImage('imageModalAOP')">
+                <img src="imgAOP.png">
+                <div class="piedProjet">
+                    <h3>Portail AOP</h3>
+                    <div class="competences">
+                        <p>SQL</p>
+                        <p>Conception BD</p>
+                        <p>Délais courts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="unProjet" onclick="openImage('imageModalDosBienMis')">
+                <img src="imgDosBienMis.png">
+                <div class="piedProjet">
+                    <h3>DosBienMis</h3>
+                    <div class="competences">
+                        <p>Html/Css</p>
+                        <p>Frontend</p>
+                        <p>Design UX/UI</p>
+                    </div>
+                </div>
+            </div>
+            <div class="unProjet" onclick="openImage('imageModalFerme')">
+                <img src="imgFerme.png">
+                <div class="piedProjet">
+                    <h3>Ferme de Steeve</h3>
+                    <div class="competences">
+                        <p>Css/FlexBox</p>
+                        <p>Livrables</p>
+                        <p>Travail d'équipe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="unProjet" onclick="openImage('imageModalTowaIA')">
+                <img src="imgTowaIA.png">
+                <div class="piedProjet">
+                    <h3>TOWA IA</h3>
+                    <div class="competences">
+                        <p>Java</p>
+                        <p>GitLab</p>
+                        <p>Analyse de résultats</p>
+                    </div>
+                </div>
+            </div>
+            <div class="unProjet" onclick="openImage('imageModalCourse')">
+                <img src="imgCourse.png">
+                <div class="piedProjet">
+                    <h3>Club de Course</h3>
+                    <div class="competences">
+                        <p>JavaScript</p>
+                        <p>SQLite</p>
+                        <p>Projet personnel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contact">
+        <div id="textContact">
+            <h2>Contactez-moi !</h2>
+            <div>
+                <p>Mail : chloe.bardot1@gmail.com</p>
+                <p>Téléphone : 06 20 27 87 54</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        function openImage(id) {
+            document.getElementById(id).style.display = "flex";
+        }
+
+        function closeImage(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+</body>
+</html>
