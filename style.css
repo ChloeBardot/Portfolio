@@ -12,14 +12,48 @@ body{
 #accueil{
     background: linear-gradient(to bottom right, rgb(1, 0, 46), rgb(69, 0, 133));
     color: white;
-    height: 49rem;
+    height: 100vh;
     font-family: "Playfair Display", serif;
 }
 #navBarre{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding-left: 2rem;
     padding-right: 4rem;
+    font-family: "Playfair Display", serif;
+    z-index: 1;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.defaut{
+    background-color: transparent;
+    color: white;
+}
+.defaut button{
+    color: white;
+}
+.defaut button:hover{
+    color: gold;
+}
+.defaut #nom:hover{
+    cursor: default;
+    color: gold;
+}
+.defile{
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.defile button{
+    color: black;
+}
+.defile button:hover{
+    color: goldenrod;
+}
+.defile #nom:hover{
+    color: goldenrod;
 }
 #nom{
     display: flex;
@@ -27,6 +61,10 @@ body{
     justify-content: space-around;
     align-items: center;
     font-size: large;
+}
+#nom:hover{
+    cursor: default;
+    color: gold;
 }
 #nomComplet p{
     margin: 0.2rem;
@@ -39,23 +77,24 @@ body{
 }
 #onglets button{
     background: none;
-    color: white;
     border: none;
     font-size: large;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-#onglets button:hover{
-    color: gold;
-}
+
+
+
+
 
 
 #presGenerale{
+    width: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: baseline;
     align-items: center;
     position: relative;
-    height: 88%;
 }
 #textePresG{
     flex-basis: 55%;
@@ -144,9 +183,10 @@ h2{
 }
 .unProjet:hover{
     cursor: pointer;
+    transform: scale(1.1);
 }
 .unProjet img{
-    width: 24rem;
+    min-width: 100%;
     height: 13.5rem;
     object-fit: cover;
     border-bottom: solid 1px rgb(43, 0, 130);

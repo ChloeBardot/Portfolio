@@ -8,24 +8,25 @@
     
 </head>
 <body>
-    <div id="accueil">
-        <div id="navBarre">
-            <div id="nom">
-                <div id="initiales">
-                    <h1>CB</h1>
-                </div>
-                <div id="nomComplet">
-                    <p>CHLOE</p>
-                    <p>BARDOT</p>
-                </div>
+    <div id="navBarre">
+        <div id="nom" onclick="location.href='#accueil'">
+            <div id="initiales">
+                <h1>CB</h1>
             </div>
-            <div id="onglets">
-                <button onclick="location.href='#presentation'">Présentation</button>
-                <button onclick="location.href='#projets'">Mes Projets</button>
-                <button onclick="location.href='#contact'">Contact</button>
+            <div id="nomComplet">
+                <p>CHLOE</p>
+                <p>BARDOT</p>
             </div>
         </div>
+        <div id="onglets">
+            <button onclick="location.href='#presentation'">Présentation</button>
+            <button onclick="location.href='#projets'">Mes Projets</button>
+            <button onclick="location.href='#contact'">Contact</button>
+        </div>
+    </div>
 
+    
+    <div id="accueil">
         <div id="presGenerale">
             <div id="textePresG">
                 <p id="titre1">Etudiante en BUT Informatique </p>
@@ -172,6 +173,17 @@
         function closeImage(id) {
             document.getElementById(id).style.display = "none";
         }
+
+        window.addEventListener('scroll', function () {
+  const navBarre = document.getElementById('navBarre');
+  if (window.scrollY > 0) {
+    navBarre.classList.add('defile');
+    navBarre.classList.remove('defaut');
+  } else {
+    navBarre.classList.remove('defile');
+    navBarre.classList.add('defaut');
+  }
+});
     </script>
 </body>
 </html>
